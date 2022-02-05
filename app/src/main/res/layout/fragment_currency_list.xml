@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.screens.CurrencyListFragment">
+    tools:context=".view.screens.CurrencyListFragment">
 
 
     <TextView
@@ -53,10 +53,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/imageViewUpdateRate"
         app:layout_constraintBottom_toTopOf="@+id/imageViewToCalculator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewUpdateRate" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewSetting"

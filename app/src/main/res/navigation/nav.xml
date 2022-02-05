@@ -6,7 +6,7 @@
     app:startDestination="@id/viewPagerFragment2">
     <fragment
         android:id="@+id/viewPagerFragment2"
-        android:name="com.example.currencyapp.onboarding.ViewPagerFragment"
+        android:name="com.example.currencyapp.view.ViewPagerFragment"
         android:label="ViewPagerFragment" >
         <action
             android:id="@+id/action_viewPagerFragment2_to_splashFragment"
@@ -14,9 +14,9 @@
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
-        android:name="com.example.currencyapp.SplashFragment"
+        android:name="com.example.currencyapp.view.screens.SettingFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
+        tools:layout="@layout/fragment_setting" >
         <action
             android:id="@+id/action_splashFragment_to_viewPagerFragment2"
             app:destination="@id/viewPagerFragment2" />

@@ -1,4 +1,4 @@
-package com.example.currencyapp.onboarding;
+package com.example.currencyapp.view;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -8,29 +8,23 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.currencyapp.R;
-import com.example.currencyapp.onboarding.screens.ConverterFragment;
-import com.example.currencyapp.onboarding.screens.CurrencyListFragment;
+import com.example.currencyapp.adapters.ViewPagerAdapter;
+import com.example.currencyapp.view.screens.ConverterFragment;
+import com.example.currencyapp.view.screens.CurrencyListFragment;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ViewPagerFragment extends Fragment {
 
-    private ArrayList<Fragment> fragments;
-    private ViewPager2 viewPager2;
     private ViewPagerViewModel viewModel;
 
     @Override
@@ -48,9 +42,9 @@ public class ViewPagerFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_view_pager, container, false);
 
 
-        viewPager2 = view.findViewById(R.id.viewPager2);
+        ViewPager2 viewPager2 = view.findViewById(R.id.viewPager2);
 
-        fragments = new ArrayList<>();
+        ArrayList<Fragment> fragments = new ArrayList<>();
         fragments.add(new ConverterFragment());
         fragments.add(new CurrencyListFragment());
 

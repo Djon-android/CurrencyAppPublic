@@ -39,7 +39,8 @@ public class ValuteAdapter extends RecyclerView.Adapter<ValuteAdapter.ValuteView
         holder.textViewNameValute.setText(valutes.get(position).getName());
         holder.textViewCode.setText(valutes.get(position).getNumCode());
         holder.textViewStringCode.setText(valutes.get(position).getCharCode());
-//        holder.textViewCountOfUnits.setText(valutes.get(position).getNominal());
+        String nominal = valutes.get(position).getNominal() + "";
+        holder.textViewCountOfUnits.setText(nominal);
         String value = valutes.get(position).getValue() + "";
         holder.textViewRate.setText(value);
     }
@@ -49,13 +50,13 @@ public class ValuteAdapter extends RecyclerView.Adapter<ValuteAdapter.ValuteView
         return valutes.size();
     }
 
-    class ValuteViewHolder extends RecyclerView.ViewHolder {
+    static class ValuteViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView textViewNameValute;
-        private TextView textViewCode;
-        private TextView textViewStringCode;
-        private TextView textViewCountOfUnits;
-        private TextView textViewRate;
+        private final TextView textViewNameValute;
+        private final TextView textViewCode;
+        private final TextView textViewStringCode;
+        private final TextView textViewCountOfUnits;
+        private final TextView textViewRate;
 
         public ValuteViewHolder(@NonNull View itemView) {
             super(itemView);

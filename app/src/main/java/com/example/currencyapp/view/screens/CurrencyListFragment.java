@@ -1,6 +1,12 @@
-package com.example.currencyapp.onboarding.screens;
+package com.example.currencyapp.view.screens;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
@@ -9,17 +15,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
-
 import com.example.currencyapp.R;
 import com.example.currencyapp.adapters.ValuteAdapter;
-import com.example.currencyapp.onboarding.ViewPagerViewModel;
+import com.example.currencyapp.view.ViewPagerViewModel;
 
 
 public class CurrencyListFragment extends Fragment {

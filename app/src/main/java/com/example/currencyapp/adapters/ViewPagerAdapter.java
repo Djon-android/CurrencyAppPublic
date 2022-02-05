@@ -1,4 +1,4 @@
-package com.example.currencyapp.onboarding;
+package com.example.currencyapp.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class ViewPagerAdapter extends FragmentStateAdapter {
 
-    private ArrayList<Fragment> fragments;
+    private final ArrayList<Fragment> fragments;
 
 
     public ViewPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle, ArrayList<Fragment> fragments) {

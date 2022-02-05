@@ -21,4 +21,6 @@
     <string name="count">Единиц</string>
     <string name="rate">Курс</string>
     <string name="to_list_valute">К списку валют</string>
+    <string name="enter_amount">Введите кол-во рублей</string>
+    <string name="select_currency">Выберете валюту для конвертации</string>
 </resources>

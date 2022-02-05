@@ -1,4 +1,4 @@
-package com.example.currencyapp;
+package com.example.currencyapp.view.screens;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -8,19 +8,17 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
-import java.util.Objects;
+import com.example.currencyapp.R;
 
-public class SplashFragment extends Fragment {
+public class SettingFragment extends Fragment {
 
     private RadioButton radioButtonDays;
     private RadioButton radioButtonEnters;
@@ -35,7 +33,7 @@ public class SplashFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_splash, container, false);
+        View view = inflater.inflate(R.layout.fragment_setting, container, false);
         radioButtonDays = view.findViewById(R.id.radioButtonDays);
         radioButtonEnters = view.findViewById(R.id.radioButtonEnters);
         imageViewMin = view.findViewById(R.id.imageViewButtonLeft);
@@ -65,13 +63,15 @@ public class SplashFragment extends Fragment {
         imageViewMin.setOnClickListener(view -> {
             if (count > 1) {
                 count--;
-                textViewCount.setText(count + "");
+                String countAsString = count + "";
+                textViewCount.setText(countAsString);
             }
         });
         imageViewMax.setOnClickListener(view -> {
             if (count < 10) {
                 count++;
-                textViewCount.setText(count + "");
+                String countAsString = count + "";
+                textViewCount.setText(countAsString);
             }
         });
 
